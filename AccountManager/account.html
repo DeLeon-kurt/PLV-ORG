@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <!-- Header (reused from home page) -->
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <img src="logo-placeholder.jpg" alt="Logo" class="logo">
+                <h1>PLV ORG</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../../eventdriven/EDP/index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Organizations</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">CEIT</a>
+                                <div class="submenu-content">
+                                    <a href="../../EDP/Organizations/CEITORG/ACES.html">ACES</a>
+                                    <a href="../../EDP/Organizations/CEITORG/AEES.html">AEES</a>
+                                    <a href="../../EDP/Organizations/CEITORG/VITS.html">VITS</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">CABA</a>
+                                <div class="submenu-content">
+                                    <a href="../../EDP/Organizations/CABAORG/AJFEX.html">AJFEX</a>
+                                    <a href="../../EDP/Organizations/CABAORG/JMA.html">JMA</a>
+                                    <a href="../../EDP/Organizations/CABAORG/JMPIA.html">JPIA</a>
+                                    <a href="../../EDP/Organizations/CABAORG/JPMAP.html">JPMAP</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">COED</a>
+                                <div class="submenu-content">
+                                    <a href="../../EDP/Organizations/COEDORG/BASEEC.html">BASEEC</a>
+                                    <a href="../../EDP/Organizations/COEDORG/BLUEPENCIL.html">BLUE PENCIL</a>
+                                    <a href="../../EDP/Organizations/COEDORG/GAME.html">GAME</a>
+                                    <a href="../../EDP/Organizations/COEDORG/SADAFIL.html">SADAFIL</a>
+                                    <a href="../../EDP/Organizations/COEDORG/SCIRE.html">SCIRE</a>
+                                    <a href="../../EDP/Organizations/COEDORG/SINAGBANWA.html">SINAG BANWA</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">CAS</a>
+                                <div class="submenu-content">
+                                    <a href="../../EDP/Organizations/CASORG/BACKSTAGE.html">BACKSTAGE</a>
+                                    <a href="../../EDP/Organizations/CASORG/JSWAP.html">JSWAP</a>
+                                    <a href="../../EDP/Organizations/CASORG/PSYCHSOC.html">PSYCHSOC</a>
+                                    <a href="../../EDP/Organizations/CASORG/UPAS.html">UPAS</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">NON-ACADEMIC ORGS</a>
+                                <div class="submenu-content">
+                                    <a href="../../EDP/Organizations/NONACADORG/BRIDGE.html">PLV BRIDGE</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/CULTURAL.html">PLV CULTURAL DANCE COMPANY</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/DANCE.html">PLV DANCE COMPANY</a>
+                                    
+                                    <a href="../../EDP/Organizations/NONACADORG/GOGH.html">PLV GOGH</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/RCYC.html">PLV RCYC</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/ROVER.html">PLV ROVER SCOUTS</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/SHIELD.html">PLV SHIELD</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/SINGERS.html">PLV SINGERS</a>
+                                    <a href="../../EDP/Organizations/NONACADORG/TIGERS.html">PLV TIGERS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../../eventdriven/EDP/AccountManager/account.html">
+                            <img src="../assets/accountlogo.png" alt="Account" class="account-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+   <!-- Account Page Container -->
+<div class="account-page">
+    <div class="account-card">
+        <!-- Profile Picture -->
+        <img src="profile-placeholder.jpg" alt="Profile Picture" class="profile-pic">
+        
+        <!-- Basic Details -->
+        <h2>Profile Details</h2>
+        <div class="account-details">
+
+            <!-- Name Row -->
+            <div class="row">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" value="John" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" value="Doe" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Middle Initial</label>
+                    <input type="text" value="M." readonly>
+                </div>
+            </div>
+
+            <!-- Student Number and Course Row -->
+            <div class="row">
+                <div class="input-group">
+                    <label>Student Number</label>
+                    <input type="text" value="2022101234" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Course</label>
+                    <input type="text" value="BS Information Technology" readonly>
+                </div>
+            </div>
+
+            <!-- Username and Email Row -->
+            <div class="row">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" value="john.doe" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" value="johndoe@example.com" readonly>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" value="**********" readonly>
+            </div>
+        </div>
+        
+        <!-- Edit Profile Button -->
+        <a href="editAccount.html" class="btn">Edit Profile</a>
+    </div>
+</div>
+
+
+    <!-- Footer (reused from home page) -->
+    <footer>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

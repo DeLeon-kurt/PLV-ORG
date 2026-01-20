@@ -1,0 +1,365 @@
+:root {
+    --main-color: #4E4E7C; /* Primary color for header */
+    --secondary-color: #E94E77; /* Accent color for buttons */
+    --bg-color: #FFFFFF; /* Light background color */
+    --font-color: #333333; /* Dark text color for readability */
+    --text-light: #FFFFFF; /* Black text color */
+    --button-color: #4E4E7C; /* Button accent color */
+    --hover-bg: #D3D3D3; /* Light gray for hover effect */
+    --hover-header: #E94E77; /* Hover color for headers */
+    --card-color: #F5F5F5; /* Card background color */
+    
+}
+
+
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+/* Header Styles */
+header {
+    background: var(--main-color); /* Updated to use main color */
+    color: var(--bg-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+nav ul li a {
+    color: var(--bg-color); /* Default font color */
+    text-decoration: none; /* Remove underline by default */
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Only transition the background color */
+    
+}
+
+/* Styles for the active link */
+nav ul li a.active {
+    background-color: #000000; /* Set active button background to black */
+    color: var(--text-light); /* Ensure text color stays light */
+    text-decoration: none; /* Ensure no underline */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* Hover Effect for Active Link */
+nav ul li a.active:hover {
+    background-color: #555555; /* Set hover background to gray */
+    color: var(--text-light); /* Ensure text stays light on hover */
+    border-radius: 5px; /* Ensure consistent rounding */
+    padding: 5px 10px; /* Same padding as active state */
+}
+
+/* Fix for "Organizations" Link */
+nav ul li a.dropbtn:hover {
+    background-color: black; /* Primary color on hover */
+    color: var(--bg-color); /* Ensure text stays white on hover */
+    border-radius: 5px;
+   
+}
+
+/* Organization Item Link Styles */
+.organization-item {
+    color: var(--font-color); /* Default font color */
+    text-decoration: none; /* Remove underline by default */
+    padding: 15px; /* Ensure proper spacing */
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transition for color and background */
+}
+
+/* Hover Effect for Organization Item */
+.organization-item:hover {
+    background-color: black; /* Primary color on hover */
+    color: var(--text-light); /* Ensure text stays white on hover */
+}
+
+/* Account Icon Link Styles */
+.account-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+/* Hover Effect for Account Icon */
+.account-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    background-color: black;
+    
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.dropdown:hover .dropbtn {
+    color: var(--text-light); /* Primary color on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-color); /* Updated for dropdown background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-light);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black; /* Primary color on hover */
+    color: var(--text-light); /* Text color on hover */
+}
+
+/* When hovering over the dropdown, display the dropdown content */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Submenu (for subcategories) */
+.dropdown-submenu {
+    position: relative;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-color); /* Submenu background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 2;
+    left: 100%; /* Initially position to the right of the parent item */
+    top: 0;
+}
+
+.dropdown-submenu:hover .submenu-content {
+    display: block;
+}
+
+/* To move the submenu to the left if it goes off-screen */
+.dropdown-submenu:hover .submenu-content {
+    left: auto;
+    right: 100%; /* Position submenu to the left if it goes off-screen */
+}
+/* Additional Custom Styles */
+.organization-item {
+    display: block;
+    margin: 15px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.organization-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.organization-item:hover {
+    background-color: var(--hover-header);
+}
+/* Profile Icon Styling */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Account Page Container */
+.account-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+    background-color: var(--bg-color); /* Keeping background the same */
+}
+
+/* Account Card Styling */
+.account-card {
+    background-color: var(--main-color); /* Apply main color for the form background */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    color: var(--text-light); /* Text color inside the form */
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Account Card Details */
+.account-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-light); /* White color for headings */
+}
+
+/* Input Group Styling */
+.account-details {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 12px;
+    color: var(--text-light); /* White color for label text */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    font-size: 16px;
+    color: var(--font-color); /* Dark text color for visibility */
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--bg-color); /* Light background for input */
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus State for Input Fields */
+.input-group input:focus {
+    border-color: var(--secondary-color); /* Dark accent color for focus state */
+    background-color: var(--bg-color); /* Keep the background color the same when focused */
+    outline: none; /* Remove the default outline */
+}
+
+/* Row Layout for Input Groups */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+/* Edit Mode Message Styling */
+.edit-mode-message {
+    font-size: 20px;
+    color: var(--text-light); /* White text color */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.save-btn {
+    background-color: #28a745; /* Green color for the button */
+    color: var(--text-light); /* White text color */
+}
+
+.save-btn:hover {
+    background-color: #218838; /* Darker green for hover effect */
+}
+
+.back-btn {
+    background-color: #000; /* Black background color for the back button */
+    color: var(--text-light); /* White text color */
+}
+
+.back-btn:hover {
+    background-color: #555555; /* Dark gray on hover */
+    color: var(--text-light); /* White text color */
+}
+
+
+/* Footer */
+footer {
+    background: var(--main-color); /* Main color for footer */
+    color: var(--text-light); /* White text color */
+    text-align: center;
+    padding: 20px;
+}

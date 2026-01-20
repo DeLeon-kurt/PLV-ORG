@@ -1,0 +1,132 @@
+:root {
+    --main-color: #4E4E7C; /* Primary color for header */
+    --secondary-color: #E94E77; /* Accent color for buttons */
+    --bg-color: #FFFFFF; /* Light background color */
+    --font-color: #333333; /* Dark text color for readability */
+    --text-light: #FFFFFF; /* Black text color */
+    --button-color: #4E4E7C; /* Button accent color */
+    --hover-bg: #D3D3D3; /* Light gray for hover effect */
+    --hover-header: #E94E77; /* Hover color for headers */
+    --card-color: #F5F5F5; /* Card background color */
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color); /* Apply dark background */
+    color: var(--text-light); /* Apply light text color */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-section {
+    width: 35%;
+    background-color: var(--main-color); /* Dark accent background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    text-align: center;
+    color: var(--text-light); /* White text inside the form */
+    max-width: 300px;
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--text-light); /* Ensure header text is light */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--bg-color); /* Dark background color for input */
+    color: #000000; /* Set text color to black */
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--main-color); /* Use main color for focus */
+    background-color: var(--bg-color); /* Keep the background color consistent */
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: black; /* Button now uses main color */
+    color: var(--text-light); /* White text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555555; /* Hover effect with main color */
+}
+
+/* Styling for Links */
+.links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.links a {
+    color: #FFFFFF; /* Set link color to white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--hover-bg); /* Hover effect for links */
+}
+
+.right-section {
+    width: 65%; /* Adjusted based on left-section width */
+    height: 100%; /* Ensures it fills the container vertically */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire right section */
+    object-position: center; /* Centers the video */
+}

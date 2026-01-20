@@ -1,0 +1,164 @@
+:root {
+    --main-color: #4E4E7C; /* Primary color for header */
+    --secondary-color: #E94E77; /* Accent color for buttons */
+    --bg-color: #FFFFFF; /* Light background color */
+    --font-color: #333333; /* Dark text color for readability */
+    --text-light: #FFFFFF; /* Black text color */
+    --button-color: #4E4E7C; /* Button accent color */
+    --hover-bg: #D3D3D3; /* Light gray for hover effect */
+    --hover-header: #E94E77; /* Hover color for headers */
+    --card-color: #F5F5F5; /* Card background color */
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color); /* Apply dark background */
+    color: var(--text-light); /* White text color */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-section {
+    width: 55%;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the section without distortion */
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-section {
+    width: 45%;
+    background-color: var(--main-color); /* Dark accent background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    color: var(--text-light); /* White text inside form */
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--text-light); /* Ensure header text is light */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Aligning Name Fields */
+.name-group {
+    display: flex;
+    gap: 10px;
+}
+
+.long-input {
+    flex: 2;
+}
+
+.short-input {
+    flex: 0.5;
+}
+
+/* Aligning Student Number and Course */
+.student-course-group {
+    display: flex;
+    gap: 10px;
+}
+
+.student-course-group input {
+    flex: 1;
+}
+
+/* Aligning Username and Email */
+.username-email-group {
+    display: flex;
+    gap: 10px;
+}
+
+.username-email-group input {
+    flex: 1;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--bg-color); /* Dark background color for input */
+    color: #000000; /* Set text color to black */
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--main-color); /* Border changes to main color on focus */
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: black; /* Button now uses main color */
+    color: var(--text-light); /* White text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555555; /* Hover effect with hover-header color */
+}
+
+/* Back Link Style */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: white; /* Link color is set to text color */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: var(--hover-bg);
+}

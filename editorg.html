@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Edit Organization Page</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <img src="logo-placeholder.jpg" alt="Logo" class="logo">
+                <h1>PLV ORG</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../../Desktop/eventdriven/EDP/index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Organizations</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">CEIT</a>
+                                <div class="submenu-content">
+                                    <a href="Organizations/CEITORG/ACES.html">ACES</a>
+                                    <a href="Organizations/CEITORG/AEES.html">AEES</a>
+                                    <a href="Organizations/CEITORG/VITS.html">VITS</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">CABA</a>
+                                <div class="submenu-content">
+                                    <a href="Organizations/CABAORG/AJFEX.html">AJFEX</a>
+                                    <a href="Organizations/CABAORG/JMA.html">JMA</a>
+                                    <a href="Organizations/CABAORG/JMPIA.html">JMPIA</a>
+                                    <a href="Organizations/CABAORG/JPMAP.html">JPMAP</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">COED</a>
+                                <div class="submenu-content">
+                                    <a href="Organizations/COEDORG/BASEEC.html">BASEEC</a>
+                                    <a href="Organizations/COEDORG/BLUEPENCIL.html">BLUE PENCIL</a>
+                                    <a href="Organizations/COEDORG/GAME.html">GAME</a>
+                                    <a href="Organizations/COEDORG/SADAFIL.html">SADAFIL</a>
+                                    <a href="Organizations/COEDORG/SCIRE.html">SCIRE</a>
+                                    <a href="Organizations/COEDORG/SINAGBANWA.html">SINAG BANWA</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">CAS</a>
+                                <div class="submenu-content">
+                                    <a href="Organizations/CASORG/BACKSTAGE.html">BACKSTAGE</a>
+                                    <a href="Organizations/CASORG/JSWAP.html">JSWAP</a>
+                                    <a href="Organizations/CASORG/PSYCHSOC.html">PSYCHSOC</a>
+                                    <a href="Organizations/CASORG/UPAS.html">UPAS</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="javascript:void(0)">NON-ACADEMIC ORGS</a>
+                                <div class="submenu-content">
+                                    <a href="Organizations/NONACADORG/BRIDGE.html">PLV BRIDGE</a>
+                                    <a href="Organizations/NONACADORG/CULTURAL.html">PLV CULTURAL DANCE COMPANY</a>
+                                    <a href="Organizations/NONACADORG/DANCE.html">PLV DANCE COMPANY</a>
+                                    
+                                    <a href="Organizations/NONACADORG/GOGH.html">PLV GOGH</a>
+                                    <a href="Organizations/NONACADORG/RCYC.html">PLV RCYC</a>
+                                    <a href="Organizations/NONACADORG/ROVER.html">PLV ROVER SCOUTS</a>
+                                    <a href="Organizations/NONACADORG/SHIELD.html">PLV SHIELD</a>
+                                    <a href="Organizations/NONACADORG/SINGERS.html">PLV SINGERS</a>
+                                    <a href="Organizations/NONACADORG/TIGERS.html">PLV TIGERS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../../Desktop/eventdriven/EDP/AccountManager/account.html">
+                            <img src="assets/accountlogo.png" alt="Account" class="account-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Edit Organization Page</h2>
+            
+            <!-- Hero Section Form -->
+            <form id="hero-form" action="update-hero.php" method="POST" enctype="multipart/form-data">
+                <h3>Hero Section</h3>
+                
+                <!-- Organization Selection Dropdown -->
+                <div class="select-wrapper">
+                    <select id="organization-select" name="organization" required>
+                        <option value="" disabled selected>Choose an organization</option>
+                        <option value="SINAG_BANWA">SINAG BANWA</option>
+                        <option value="ACES">ACES</option>
+                        <option value="AEES">AEES</option>
+                        <option value="VITS">VITS</option>
+                        <!-- Add more organizations here as needed -->
+                    </select>
+                </div>
+
+                <label for="hero-title">Title:</label>
+                <input type="text" id="hero-title" name="hero-title" value="Welcome to SINAG BANWA" required>
+                
+                <label for="hero-description">Description:</label>
+                <textarea id="hero-description" name="hero-description" rows="3" required>SDFASDFASFDASDFASDFASDFASDFASDF</textarea>
+                
+                <label for="hero-image">Banner Image:</label>
+                <input type="file" id="hero-image" name="hero-image" accept="image/*">
+                
+                <button type="submit">Update Hero Section</button>
+            </form>
+
+            <hr>
+
+            <!-- About Section Form -->
+            <form id="about-form" action="update-about.php" method="POST" enctype="multipart/form-data">
+                <h3>About Section</h3>
+                <label for="about-description">Description:</label>
+                <textarea id="about-description" name="about-description" rows="5" required>
+                    Samahan ng mga Iskolar ng Araling Panlipunan...
+                </textarea>
+                
+                <label for="about-image">About Image:</label>
+                <input type="file" id="about-image" name="about-image" accept="image/*">
+                
+                <button type="submit">Update About Section</button>
+            </form>
+
+            <hr>
+
+            <!-- Additional sections omitted for brevity -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Admin Panel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,375 @@
+:root {
+    --main-color: #4E4E7C; /* Primary color for header */
+    --secondary-color: #E94E77; /* Accent color for buttons */
+    --bg-color: #FFFFFF; /* Light background color */
+    --font-color: #333333; /* Dark text color for readability */
+    --text-light: #FFFFFF; /* Black text color */
+    --button-color: #4E4E7C; /* Button accent color */
+    --hover-bg: #D3D3D3; /* Light gray for hover effect */
+    --hover-header: #E94E77; /* Hover color for headers */
+    --card-color: #F5F5F5; /* Card background color */
+    
+}
+
+
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+/* Header Styles */
+header {
+    background: var(--main-color); /* Updated to use main color */
+    color: var(--bg-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+nav ul li a {
+    color: var(--bg-color); /* Default font color */
+    text-decoration: none; /* Remove underline by default */
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Only transition the background color */
+    
+}
+
+/* Styles for the active link */
+nav ul li a.active {
+    background-color: #000000; /* Set active button background to black */
+    color: var(--text-light); /* Ensure text color stays light */
+    text-decoration: none; /* Ensure no underline */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* Hover Effect for Active Link */
+nav ul li a.active:hover {
+    background-color: #555555; /* Set hover background to gray */
+    color: var(--text-light); /* Ensure text stays light on hover */
+    border-radius: 5px; /* Ensure consistent rounding */
+    padding: 5px 10px; /* Same padding as active state */
+}
+
+/* Fix for "Organizations" Link */
+nav ul li a.dropbtn:hover {
+    background-color: black; /* Primary color on hover */
+    color: var(--bg-color); /* Ensure text stays white on hover */
+    border-radius: 5px;
+   
+}
+
+/* Organization Item Link Styles */
+.organization-item {
+    color: var(--font-color); /* Default font color */
+    text-decoration: none; /* Remove underline by default */
+    padding: 15px; /* Ensure proper spacing */
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transition for color and background */
+}
+
+/* Hover Effect for Organization Item */
+.organization-item:hover {
+    background-color: black; /* Primary color on hover */
+    color: var(--text-light); /* Ensure text stays white on hover */
+}
+
+/* Account Icon Link Styles */
+.account-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+/* Hover Effect for Account Icon */
+.account-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    background-color: black;
+    
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.dropdown:hover .dropbtn {
+    color: var(--text-light); /* Primary color on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-color); /* Updated for dropdown background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-light);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black; /* Primary color on hover */
+    color: var(--text-light); /* Text color on hover */
+}
+
+/* When hovering over the dropdown, display the dropdown content */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Submenu (for subcategories) */
+.dropdown-submenu {
+    position: relative;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-color); /* Submenu background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 2;
+    left: 100%; /* Initially position to the right of the parent item */
+    top: 0;
+}
+
+.dropdown-submenu:hover .submenu-content {
+    display: block;
+}
+
+/* To move the submenu to the left if it goes off-screen */
+.dropdown-submenu:hover .submenu-content {
+    left: auto;
+    right: 100%; /* Position submenu to the left if it goes off-screen */
+}
+/* Additional Custom Styles */
+.organization-item {
+    display: block;
+    margin: 15px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.organization-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.organization-item:hover {
+    background-color: var(--hover-header);
+}
+/* Hero Section */
+#hero {
+    background: url('assets/banner.jpg') no-repeat center center/cover;
+    color: var(--bg-color);
+    text-align: center;
+    padding: 130px 10px; /* Increased padding for a larger hero section */
+}
+
+.hero-content h2 {
+    font-size: 70px; /* Increased font size for the heading */
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px; /* Increased font size for the paragraph */
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000000; /* Black button background */
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background: #555555; /* Gray background on hover */
+}
+
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--bg-color); /* Updated to use dark background color */
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing */
+    max-width: 1200px; /* Adjusted max-width to fit larger content */
+    margin: 0 auto;
+    text-align: left;
+    flex-wrap: wrap; /* Ensures content stacks neatly on smaller screens */
+}
+
+.about-image {
+    width: 400px; /* Increased width of the image */
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.about-text {
+    max-width: 600px;
+    flex-grow: 1; /* Allows text to take up remaining space */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* Organizations Section */
+.organization-grid {
+    
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.organization-item {
+    width: 300px;
+    background: var(--bg-color); /* Updated to use dark background color */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.organization-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.organization-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: var(--main-color);
+}
+
+#organizations {
+    
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#ceit-organizations h2 {
+    
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#caba-organizations h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#coed-organizations h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#cas-organizations h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#non-academic-organizations h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Seperator lines */
+.custom-separator {
+    border: none; /* Remove default border */
+    height: 5px; /* Increased thickness of the line */
+    width: 80%; /* Increased length of the line */
+    background-color: var(--main-color); /* Use your main color */
+    margin: 50px auto; /* Center the line with more spacing */
+    border-radius: 12px; /* Round the edges for a smoother look */
+}
+
+
+
+/* Footer */
+footer {
+    background: var(--main-color); /* Updated to use main color */
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signUpPage.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Background Image Only -->
+        <div class="left-section">
+            <video autoplay muted loop>
+                <source src="../assets/showcase1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Right Section: Logo and Sign Up Form -->
+        <div class="right-section">
+            <div class="form-container">
+                <img src="../assets/PLV.png" alt="Website Logo" class="logo">
+                <h2>Sign Up</h2>
+                <form>
+                    <!-- Name Fields -->
+                    <div class="name-group">
+                        <input type="text" placeholder="First Name" class="long-input" required>
+                        <input type="text" placeholder="Last Name" class="long-input" required>
+                        <input type="text" placeholder="M.I." maxlength="1" class="short-input" required>
+                    </div>
+
+                    <!-- Student Number and Course -->
+                    <div class="student-course-group">
+                        <input type="text" placeholder="Student Number" required>
+                        <input type="text" placeholder="Course" required>
+                    </div>
+
+                    <!-- Username and Email -->
+                    <div class="username-email-group">
+                        <input type="text" placeholder="Username" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+
+                    <!-- Password and Confirm Password -->
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+
+                    <!-- Sign Up Button -->
+                    <button type="submit">Sign Up</button>
+                </form>
+                
+                <!-- Back Link -->
+                <a href="loginPage.html" class="back-link">Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
